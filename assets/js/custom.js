@@ -20,7 +20,7 @@ document.getElementById('free_session_request_form').addEventListener('submit', 
             alert('Thank you! Your email has been sent.');
             emailInput.value = ''; // Clear the input field
         } else {
-            alert('Oops! There was a problem. Please try again later.');
+            alert('Sorry! There was a problem. Please try again later.');
         }
     })
     .catch(error => {
