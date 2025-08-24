@@ -1,212 +1,377 @@
 <!DOCTYPE HTML>
-<!--
-	Landed by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title>CodAmis</title>
+		<title>Codamis</title>
 		<link rel="icon" type="image/x-icon" href="/images/favicon/favicon.ico">
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<link rel="stylesheet" href="assets/css/main.css"/>
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
+		<link rel="stylesheet" href="assets/css/custom.css"/>
+
 	</head>
 	<body class="is-preload landing">
 		<div id="page-wrapper">
+			
+			<!-- <div class="language-switcher">
+				<button onclick="switchLanguage('en')" id="en-btn" class="active">EN</button>
+				<button onclick="switchLanguage('fr')" id="fr-btn">FR</button>
+			</div> -->
 
 			<!-- Header -->
-				<header id="header">
-					<h1 id="logo"><a href="index.html">Codamis - Where Kids Code with Fun</a></h1>
-					<nav id="nav">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<!-- <li>
-								<a href="#">Layouts lore</a>
-								<ul>
-									<li><a href="left-sidebar.html">Left Sidebar</a></li>
-									<li><a href="right-sidebar.html">Right Sidebar</a></li>
-									<li><a href="no-sidebar.html">No Sidebar</a></li>
-									<li>
-										<a href="#">Submenu</a>
-										<ul>
-											<li><a href="#">Option 1</a></li>
-											<li><a href="#">Option 2</a></li>
-											<li><a href="#">Option 3</a></li>
-											<li><a href="#">Option 4</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li> -->
-							<!-- <li><a href="elements.html">Elements</a></li> -->
-							<li><a href="#" class="button primary">Register</a></li>
-						</ul>
-					</nav>
-				</header>
+			<header id="header">
+				<h1 id="logo">
+					<a href="index.html">
+						<span data-lang="en" class="active">Codamis - Where Kids Code with Fun</span>
+						<span data-lang="fr">Codamis - Où les Enfants Codent en S'amusant</span>
+					</a>
+				</h1>
+
+				<nav id="nav">
+					<ul>
+						<li>
+							<a href="index.html">
+                <span data-lang="en" class="active">Home</span>
+                <span data-lang="fr">Accueil</span>
+							</a>
+						</li>
+						<li>
+							<div class="language-switcher">
+								<button onclick="switchLanguage('en')" id="en-btn" class="active">EN</button>
+								<button onclick="switchLanguage('fr')" id="fr-btn">FR</button>
+							</div>
+						</li>
+						<li>
+							<a href="#" class="button primary">
+								                <span data-lang="en" class="active">Register</span>
+                <span data-lang="fr">S'inscrire</span>
+							</a>
+						</li>
+												<!-- <li>
+							<a href="#">Layouts lore</a>
+							<ul>
+								<li><a href="left-sidebar.html">Left Sidebar</a></li>
+								<li><a href="right-sidebar.html">Right Sidebar</a></li>
+								<li><a href="no-sidebar.html">No Sidebar</a></li>
+								<li>
+									<a href="#">Submenu</a>
+									<ul>
+										<li><a href="#">Option 1</a></li>
+										<li><a href="#">Option 2</a></li>
+										<li><a href="#">Option 3</a></li>
+										<li><a href="#">Option 4</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li> -->
+						<!-- <li><a href="elements.html">Elements</a></li> -->
+					</ul>
+				</nav>
+<!-- 
+				<nav id="nav">
+					<ul>
+						                    <li>
+                        <div class="language-switcher">
+                            <button onclick="switchLanguage('en')" id="en-btn" class="active">EN</button>
+                            <button onclick="switchLanguage('fr')" id="fr-btn">FR</button>
+                        </div>
+                    </li>
+
+						<li>
+							<a href="index.html">
+								<div data-lang="en" class="active">Home</div>
+								<div data-lang="fr">Accueil</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="button primary">
+								<div data-lang="en" class="active">Register</div>
+								<div data-lang="fr">S'inscrire</div>
+							</a>
+						</li>
+					</ul>
+				</nav> -->
+			</header>
 
 			<!-- Banner -->
-				<section id="banner">
-					<div class="content">
-						<header>
-							<h2>The future has landed</h2>
-							<p>And there are no hoverboards or flying cars.<br />
-							Just apps, AI and of course, code. Lots of Code!</p>
-						</header>
-						<span class="image"><img src="images/code4kids.jpg" alt="" /></span>
-					</div>
-					<a href="#one" class="goto-next scrolly">Next</a>
-				</section>
+			<section id="banner">
+				<div class="content">
+					<header>
+						<h2>
+							<span data-lang="en" class="active">The future has landed</span>
+							<span data-lang="fr">Le futur est arrivé</span>
+						</h2>
+						<p>
+							<span data-lang="en" class="active">And there are no hoverboards or flying cars.<br />
+							Just apps, AI and of course, code. Lots of Code!</span>
+							<span data-lang="fr">Et il n'y a pas de planches volantes ou de voitures volantes.<br />
+							Juste des applications, de l'IA et bien sûr, du code. Beaucoup de code !</span>
+						</p>
+					</header>
+					<span class="image"><img src="images/code4kids.jpg" alt="" /></span>
+				</div>
+				<a href="#one" class="goto-next scrolly">
+					<span data-lang="en" class="active">Next</span>
+					<span data-lang="fr">Suivant</span>
+				</a>
+			</section>
 
 			<!-- One -->
-				<section id="one" class="spotlight style1 bottom">
-					<span class="image fit main"><img src="images/pic02.jpg" alt="" /></span>
-					<div class="content">
-						<div class="container">
-							<div class="row">
-								<div class="col-4 col-12-medium">
-									<header>
-										<h2>Turn screen time into skill time</h2>
-										<p>coding should never be boring</p>
-									</header>
-								</div>
-								<div class="col-4 col-12-medium">
-									<p>We believe children can gain a strong foundation for future digital life by learning coding early. At Codamis, we guide kids to think like creators, not just consumers. Through fun hands-on projects, they use problem-solving and logical thinking to turn ideas into digital realities</p>
-								</div>
-								<div class="col-4 col-12-medium">
-									<p>At <span>Codamis</span>, we make coding exciting for kids. Through games, challenges, and creative projects, children learn real programming skills while having fun. They won’t just play with technology — they’ll build it.</p>
-								</div>
+			<section id="one" class="spotlight style1 bottom">
+				<span class="image fit main"><img src="images/pic02.jpg" alt="" /></span>
+				<div class="content">
+					<div class="container">
+						<div class="row">
+							<div class="col-4 col-12-medium">
+								<header>
+									<h2>
+										<span data-lang="en" class="active">Turn screen time into skill time</span>
+										<span data-lang="fr">Transformez le temps d'écran en temps d'apprentissage</span>
+									</h2>
+									<p>
+										<span data-lang="en" class="active">coding should never be boring</span>
+										<span data-lang="fr">le codage ne devrait jamais être ennuyeux</span>
+									</p>
+								</header>
+							</div>
+							<div class="col-4 col-12-medium">
+								<p>
+									<span data-lang="en" class="active">We believe children can gain a strong foundation for future digital life by learning coding early. At Codamis, we guide kids to think like creators, not just consumers. Through fun hands-on projects, they use problem-solving and logical thinking to turn ideas into digital realities</span>
+									<span data-lang="fr">Nous croyons que les enfants peuvent acquérir une base solide pour la vie numérique future en apprenant le codage tôt. Chez Codamis, nous guidons les enfants à penser comme des créateurs, pas seulement des consommateurs. À travers des projets pratiques amusants, ils utilisent la résolution de problèmes et la pensée logique pour transformer les idées en réalités numériques</span>
+								</p>
+							</div>
+							<div class="col-4 col-12-medium">
+								<p>
+									<span data-lang="en" class="active">At <strong>Codamis</strong>, we make coding exciting for kids. Through games, challenges, and creative projects, children learn real programming skills while having fun. They won't just play with technology — they'll build it.</span>
+									<span data-lang="fr">Chez <strong>Codamis</strong>, nous rendons le codage passionnant pour les enfants. À travers des jeux, des défis et des projets créatifs, les enfants apprennent de vraies compétences de programmation tout en s'amusant. Ils ne joueront pas seulement avec la technologie — ils la construiront.</span>
+								</p>
 							</div>
 						</div>
 					</div>
-					<a href="#two" class="goto-next scrolly">Next</a>
-				</section>
+				</div>
+				<a href="#two" class="goto-next scrolly">
+					<span data-lang="en" class="active">Next</span>
+					<span data-lang="fr">Suivant</span>
+				</a>
+			</section>
 
 			<!-- Two -->
-				<section id="two" class="spotlight style2 right">
-					<span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>
-					<div class="content">
-						<header>
-							<h2>From games to growth</h2>
-							<p>your child’s coding journey starts here</p>
-						</header>
-						<p>We help children to have enough confidence with code and turning their ideas in real software projects</p>
-						<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
-						</ul>
-					</div>
-					<a href="#three" class="goto-next scrolly">Next</a>
-				</section>
+			<section id="two" class="spotlight style2 right">
+				<span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>
+				<div class="content">
+					<header>
+						<h2>
+							<span data-lang="en" class="active">From games to growth</span>
+							<span data-lang="fr">Des jeux à la croissance</span>
+						</h2>
+						<p>
+							<span data-lang="en" class="active">your child's coding journey starts here</span>
+							<span data-lang="fr">le parcours de codage de votre enfant commence ici</span>
+						</p>
+					</header>
+					<p>
+						<span data-lang="en" class="active">We help children to have enough confidence with code and turning their ideas in real software projects</span>
+						<span data-lang="fr">Nous aidons les enfants à avoir suffisamment de confiance avec le code et à transformer leurs idées en vrais projets logiciels</span>
+					</p>
+					<ul class="actions">
+						<li>
+							<a href="#" class="button">
+								<span data-lang="en" class="active">Learn More</span>
+								<span data-lang="fr">En Savoir Plus</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<a href="#three" class="goto-next scrolly">
+					<span data-lang="en" class="active">Next</span>
+					<span data-lang="fr">Suivant</span>
+				</a>
+			</section>
 
 			<!-- Three -->
-				<section id="three" class="spotlight style3 left">
-					<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
-					<div class="content">
-						<header>
-							<h2>Coding should never be boring</h2>
-							<p>Our method is based on fun way, games and creativity</p>
-						</header>
-						<p>Let your child code their first game today</p>
-						<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
-						</ul>
-					</div>
-					<a href="#four" class="goto-next scrolly">Next</a>
-				</section>
+			<section id="three" class="spotlight style3 left">
+				<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
+				<div class="content">
+					<header>
+						<h2>
+							<span data-lang="en" class="active">Coding should never be boring</span>
+							<span data-lang="fr">Le codage ne devrait jamais être ennuyeux</span>
+						</h2>
+						<p>
+							<span data-lang="en" class="active">Our method is based on fun way, games and creativity</span>
+							<span data-lang="fr">Notre méthode est basée sur l'amusement, les jeux et la créativité</span>
+						</p>
+					</header>
+					<p>
+						<span data-lang="en" class="active">Let your child code their first game today</span>
+						<span data-lang="fr">Laissez votre enfant coder son premier jeu aujourd'hui</span>
+					</p>
+					<ul class="actions">
+						<li>
+							<a href="#" class="button">
+								<span data-lang="en" class="active">Learn More</span>
+								<span data-lang="fr">En Savoir Plus</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<a href="#four" class="goto-next scrolly">
+					<span data-lang="en" class="active">Next</span>
+					<span data-lang="fr">Suivant</span>
+				</a>
+			</section>
 
 			<!-- Four -->
-				<section id="four" class="wrapper style1 special fade-up">
-					<div class="container">
-						<header class="major">
-							<h2>Accumsan sed tempus adipiscing blandit</h2>
-							<p>Iaculis ac volutpat vis non enim gravida nisi faucibus posuere arcu consequat</p>
-						</header>
-						<div class="box alt">
-							<div class="row gtr-uniform">
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-chart-area"></span>
-									<h3>Ipsum sed commodo</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-comment"></span>
-									<h3>Eleifend lorem ornare</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-flask"></span>
-									<h3>Cubilia cep lobortis</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-paper-plane"></span>
-									<h3>Non semper interdum</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-file"></span>
-									<h3>Odio laoreet accumsan</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-lock"></span>
-									<h3>Massa arcu accumsan</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-							</div>
+			<section id="four" class="wrapper style1 special fade-up">
+				<div class="container">
+					<header class="major">
+						<h2>
+							<span data-lang="en" class="active">Why Choose Codamis?</span>
+							<span data-lang="fr">Pourquoi Choisir Codamis ?</span>
+						</h2>
+						<p>
+							<span data-lang="en" class="active">Discover the benefits of our innovative coding education approach</span>
+							<span data-lang="fr">Découvrez les avantages de notre approche innovante de l'éducation au codage</span>
+						</p>
+					</header>
+					<div class="box alt">
+						<div class="row gtr-uniform">
+							<section class="col-4 col-6-medium col-12-xsmall">
+								<span class="icon solid alt major fa-chart-area"></span>
+								<h3>
+									<span data-lang="en" class="active">Progress Tracking</span>
+									<span data-lang="fr">Suivi des Progrès</span>
+								</h3>
+								<p>
+									<span data-lang="en" class="active">Monitor your child's learning journey with detailed progress reports and achievements.</span>
+									<span data-lang="fr">Suivez le parcours d'apprentissage de votre enfant avec des rapports détaillés et des réalisations.</span>
+								</p>
+							</section>
+							<section class="col-4 col-6-medium col-12-xsmall">
+								<span class="icon solid alt major fa-comment"></span>
+								<h3>
+									<span data-lang="en" class="active">Interactive Learning</span>
+									<span data-lang="fr">Apprentissage Interactif</span>
+								</h3>
+								<p>
+									<span data-lang="en" class="active">Engage with our interactive platform designed specifically for young learners.</span>
+									<span data-lang="fr">Interagissez avec notre plateforme interactive conçue spécialement pour les jeunes apprenants.</span>
+								</p>
+							</section>
+							<section class="col-4 col-6-medium col-12-xsmall">
+								<span class="icon solid alt major fa-flask"></span>
+								<h3>
+									<span data-lang="en" class="active">Creative Projects</span>
+									<span data-lang="fr">Projets Créatifs</span>
+								</h3>
+								<p>
+									<span data-lang="en" class="active">Build amazing games, apps, and digital art through hands-on creative projects.</span>
+									<span data-lang="fr">Créez des jeux incroyables, des applications et de l'art numérique grâce à des projets pratiques.</span>
+								</p>
+							</section>
+							<section class="col-4 col-6-medium col-12-xsmall">
+								<span class="icon solid alt major fa-paper-plane"></span>
+								<h3>
+									<span data-lang="en" class="active">Expert Guidance</span>
+									<span data-lang="fr">Guidance d'Expert</span>
+								</h3>
+								<p>
+									<span data-lang="en" class="active">Learn from experienced instructors who make coding fun and accessible.</span>
+									<span data-lang="fr">Apprenez avec des instructeurs expérimentés qui rendent le codage amusant et accessible.</span>
+								</p>
+							</section>
+							<section class="col-4 col-6-medium col-12-xsmall">
+								<span class="icon solid alt major fa-file"></span>
+								<h3>
+									<span data-lang="en" class="active">Structured Curriculum</span>
+									<span data-lang="fr">Curriculum Structuré</span>
+								</h3>
+								<p>
+									<span data-lang="en" class="active">Follow our carefully designed curriculum that builds skills progressively.</span>
+									<span data-lang="fr">Suivez notre curriculum soigneusement conçu qui développe les compétences progressivement.</span>
+								</p>
+							</section>
+							<section class="col-4 col-6-medium col-12-xsmall">
+								<span class="icon solid alt major fa-lock"></span>
+								<h3>
+									<span data-lang="en" class="active">Safe Environment</span>
+									<span data-lang="fr">Environnement Sécurisé</span>
+								</h3>
+								<p>
+									<span data-lang="en" class="active">Learn in a secure, child-friendly environment with oversight.</span>
+									<span data-lang="fr">Apprenez dans un environnement sécurisé et adapté aux enfants.</span>
+								</p>
+							</section>
 						</div>
-						<footer class="major">
-							<ul class="actions special">
-								<li><a href="#" class="button">Inscription</a></li>
-							</ul>
-						</footer>
 					</div>
-				</section>
+					<footer class="major">
+						<ul class="actions special">
+							<li>
+								<a href="#" class="button">
+									<span data-lang="en" class="active">Register Now</span>
+									<span data-lang="fr">S'inscrire Maintenant</span>
+								</a>
+							</li>
+						</ul>
+					</footer>
+				</div>
+			</section>
 
 			<!-- Five -->
-				<section id="five" class="wrapper style2 special fade">
-					<div class="container">
-						<header>
-							<h2>Still not sure?</h2>
-							<p>Leave your eamil here, and we organize a free session for your child, as a guest student</p>
-						</header>
-						<form id="free_session_request_form" method="POST" action="#" class="cta">
-							<div class="row gtr-uniform gtr-50">
-								<div class="col-8 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Your Email Address" /></div>
-								<div class="col-4 col-12-xsmall"><input type="submit" value="Get Started" class="fit primary" /></div>
+			<section id="five" class="wrapper style2 special fade">
+				<div class="container">
+					<header>
+						<h2>
+							<span data-lang="en" class="active">Still not sure?</span>
+							<span data-lang="fr">Encore des doutes ?</span>
+						</h2>
+						<p>
+							<span data-lang="en" class="active">Leave your email here, and we organize a free session for your child, as a guest student</span>
+							<span data-lang="fr">Laissez votre email ici, et nous organisons une séance gratuite pour votre enfant, en tant qu'étudiant invité</span>
+						</p>
+					</header>
+					<form id="free_session_request_form" method="POST" action="#" class="cta">
+						<div class="row gtr-uniform gtr-50">
+							<div class="col-8 col-12-xsmall">
+								<div data-lang="en"><input type="email" name="email" id="email" placeholder="Your Email Address" /></div>
+								<div data-lang="fr"><input type="email" name="email" id="email" placeholder="Votre Adresse Email" /></div>
 							</div>
-						</form>
-					</div>
-				</section>
+							<div class="col-4 col-12-xsmall">
+								<div data-lang="en"></span><input type="submit" value="Get Started" class="fit primary" /></div>
+								<div data-lang="fr"></span><input type="submit" value="Commencer" class="fit primary" /></div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</section>
 
 			<!-- Footer -->
-				<footer id="footer">
-					<ul class="icons">
-						<!-- <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li> -->
-						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<!-- <li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li> -->
-						<!-- <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li> -->
-						<!-- <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li> -->
-						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Codamis organization. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</footer>
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; 
+						<span data-lang="en" class="active">Codamis organization. All rights reserved.</span>
+						<span data-lang="fr">Organisation Codamis. Tous droits réservés.</span>
+					</li>
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer>
 
 		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="assets/js/custom.js"></script>
-
-
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/custom.js"></script>
+		<script src="assets/js/language.js"></script>
 	</body>
 </html>

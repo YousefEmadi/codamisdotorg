@@ -51,26 +51,86 @@
 			)
 				.appendTo($body);
 
-		// Panel.
-			$(
-				'<div id="navPanel">' +
-					'<nav>' +
-						$('#nav').navList() +
-					'</nav>' +
-				'</div>'
-			)
-				.appendTo($body)
-				.panel({
-					delay: 500,
-					hideOnClick: true,
-					hideOnSwipe: true,
-					resetScroll: true,
-					resetForms: true,
-					side: 'left',
-					target: $body,
-					visibleClass: 'navPanel-visible'
-				});
+// Custom function to create mobile nav with proper language support
+function createMobileNavList() {
+    var $nav = $('#nav > ul');
+    var $result = $('<ul></ul>');
+    
+    $nav.children('li').each(function() {
+        var $this = $(this);
+        var $link = $this.children('a').first();
+        var $switcher = $this.children('.language-switcher');
+        
+        // Skip language switcher in mobile nav as we add it separately
+        if ($switcher.length > 0) {
+            return;
+        }
+        
+        if ($link.length > 0) {
+            var $newLi = $('<li></li>');
+            var $newLink = $('<a></a>');
+            
+            // Copy all attributes from original link
+            $.each($link[0].attributes, function(i, attr) {
+                $newLink.attr(attr.name, attr.value);
+            });
+            
+            // Handle language-specific content
+            var $langElements = $link.find('[data-lang]');
+            if ($langElements.length > 0) {
+                $langElements.each(function() {
+                    var $elem = $(this);
+                    var $newSpan = $('<span></span>');
+                    $newSpan.attr('data-lang', $elem.attr('data-lang'));
+                    if ($elem.hasClass('active')) {
+                        $newSpan.addClass('active');
+                    }
+                    $newSpan.text($elem.text());
+                    $newLink.append($newSpan);
+                });
+            } else {
+                // If no language elements, copy text directly
+                $newLink.html($link.html());
+            }
+            
+            // Add the link class for mobile nav styling
+            $newLink.addClass('link depth-0');
+            
+            $newLi.append($newLink);
+            $result.append($newLi);
+        }
+    });
+    
+    return $result;
+}
 
+// Panel.
+$(
+    '<div id="navPanel">' +
+        '<nav>' +
+        '</nav>' +
+    '</div>'
+)
+    .appendTo($body)
+    .panel({
+        delay: 500,
+        hideOnClick: true,
+        hideOnSwipe: true,
+        resetScroll: true,
+        resetForms: true,
+        side: 'left',
+        target: $body,
+        visibleClass: 'navPanel-visible'
+    });
+
+// Add the custom navigation list to the panel
+$('#navPanel nav').append(createMobileNavList());
+// Add language switcher to mobile nav panel after it's created
+setTimeout(function() {
+    if (typeof addMobileLanguageSwitcher === 'function') {
+        addMobileLanguageSwitcher();
+    }
+}, 100);
 	// Parallax.
 	// Disabled on IE (choppy scrolling) and mobile platforms (poor performance).
 		if (browser.name == 'ie'
@@ -248,3 +308,20 @@
 			._parallax();
 
 })(jQuery);
+
+
+// Initialize mobile navigation language support
+$(document).ready(function() {
+    setTimeout(function() {
+        if (typeof addMobileLanguageSwitcher === 'function') {
+            addMobileLanguageSwitcher();
+        }
+        if (typeof fixMobileNavLanguages === 'function') {
+            fixMobileNavLanguages();
+        }
+        // Trigger initial language state for mobile nav
+        if (typeof switchLanguage === 'function' && typeof currentLanguage !== 'undefined') {
+            switchLanguage(currentLanguage);
+        }
+    }, 300);
+});
