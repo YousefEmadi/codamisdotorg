@@ -152,3 +152,19 @@ nav [data-lang].active {
 .button [data-lang].active {
     display: inline !important;
 }
+
+/* Remove bullet points from mobile navigation */
+#navPanel nav ul {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 0 !important;
+}
+
+#navPanel nav ul li {
+    list-style: none !important;
+    padding-left: 0 !important;
+}
+
+#navPanel .link {
+    list-style: none !important;
+}
