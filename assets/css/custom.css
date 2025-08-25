@@ -168,3 +168,63 @@ nav [data-lang].active {
 #navPanel .link {
     list-style: none !important;
 }
+
+
+/* End of Language switcher */
+
+/* Image Card Hover Effect */
+.image_card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.image_card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: filter 0.4s ease, brightness 0.4s ease;
+}
+
+.image_card .image_title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: 300;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 2;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+/* Hover Effects */
+.image_card:hover img {
+    filter: brightness(0.3) contrast(1.2);
+}
+
+.image_card:hover .image_title {
+    opacity: 1;
+}
+
+.image_card:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive font size for mobile */
+@media screen and (max-width: 736px) {
+    .image_card .image_title {
+        font-size: 1.2em;
+        white-space: normal;
+        padding: 0 1em;
+    }
+}
+
+/* End of Image Card*/
