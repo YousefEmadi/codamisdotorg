@@ -186,6 +186,8 @@ nav [data-lang].active {
     height: 100%;
     object-fit: cover;
     display: block;
+    /* Default state: Image is dark */
+    filter: brightness(0.3) contrast(1.2);
     transition: filter 0.4s ease, brightness 0.4s ease;
 }
 
@@ -198,20 +200,23 @@ nav [data-lang].active {
     font-size: 1.5em;
     font-weight: 300;
     text-align: center;
-    opacity: 0;
+    /* Default state: Title is visible */
+    opacity: 1;
     transition: opacity 0.4s ease;
     z-index: 2;
     pointer-events: none;
     white-space: nowrap;
 }
 
-/* Hover Effects */
+/* Hover Effects - SWAPPED */
 .image_card:hover img {
-    filter: brightness(0.3) contrast(1.2);
+    /* On hover: Image becomes bright */
+    filter: brightness(1) contrast(1);
 }
 
 .image_card:hover .image_title {
-    opacity: 1;
+    /* On hover: Title disappears */
+    opacity: 0;
 }
 
 .image_card:hover {
@@ -226,5 +231,4 @@ nav [data-lang].active {
         padding: 0 1em;
     }
 }
-
 /* End of Image Card*/
